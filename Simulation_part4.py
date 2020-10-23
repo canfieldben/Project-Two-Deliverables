@@ -8,6 +8,7 @@ our simulation
 from random import *
 from math import *
 i = 0
+run_time = 0
 
 
 def simulation(x, y, z, q):
@@ -115,9 +116,13 @@ def average_profit(x, y, z, q):
 
 # the number being compared was the highest average, this number can be changed depending on the outcome you get each time
 # note that if you make the number too high the simulation will run for ever trying to find an average higher
-# $1.7 seems to be the highest average profit this simulation can find.
-while i < 1.7:
+# $1.7 seems to be the highest average profit this simulation can find... however the program will still run potentially hundreds of times until it finds an average greater.
+
+
+while i < 1.7070251416806141:
+    run_time += 1
     pass_list = run_simulation()
     i = float((average_profit(float(pass_list[0]), float(pass_list[1]), float(pass_list[2]), float(pass_list[3]))))
 print("Average Profit with these values: " + str(i))
+print("Simulation ran: " + str(run_time) + " times")
 
