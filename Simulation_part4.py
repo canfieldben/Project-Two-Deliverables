@@ -119,7 +119,7 @@ def average_profit(x, y, z, q):
 # $1.7 seems to be the highest average profit this simulation can find... however the program will still run potentially hundreds of times until it finds an average greater.
 
 
-while i < 1.7070251416806141:
+while i < 1.68:
     run_time += 1
     pass_list = run_simulation()
     i = float((average_profit(float(pass_list[0]), float(pass_list[1]), float(pass_list[2]), float(pass_list[3]))))
